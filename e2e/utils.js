@@ -7,7 +7,7 @@ var beforeEach = function () {
         path: electron,
         args: ['.'],
         startTimeout: 10000,
-        waitTimeout: 10000,
+        waitTimeout: 10000
     });
     return this.app.start();
 };
@@ -19,7 +19,12 @@ var afterEach = function () {
     }
 };
 
+var timeFormate = function (value) {
+    return value < 10 ? '0' + value : value.toString();
+};
+
 export default {
     beforeEach: beforeEach,
     afterEach: afterEach,
+    timeFormate: timeFormate
 };
