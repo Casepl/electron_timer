@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let time = timer();
         let el = null;
         let listEl = null;
-        let timeString = "";
+        let timeString = formateTime(time.hours) + ":" + formateTime(time.minutes) + ":"
+            + formateTime(time.seconds);
         if(time.hour == currentTime.getHours()+1 && time.minutes == currentTime.getMinutes()){
             windT.notify({title: "Upwork time",
                                     message: "Don't forget",

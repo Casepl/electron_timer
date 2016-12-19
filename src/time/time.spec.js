@@ -6,13 +6,13 @@ describe("timer", function () {
 
     it("timer", function () {
         let time = new Date();
-        expect(timer()).to.eql({hour: time.getHours(), minutes: time.getMinutes(), seconds: time.getSeconds()});
+        expect(timer()).to.eql({hours: time.getHours(), minutes: time.getMinutes(), seconds: time.getSeconds()});
     });
 
     it("add hour check", function () {
        let time = timer();
        let date = new Date();
-        expect(time.hour+1).to.equal(date.getHours()+1);
+        expect(time.hours+1).to.equal(date.getHours()+1);
     });
 
 
